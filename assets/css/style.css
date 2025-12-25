@@ -1,0 +1,217 @@
+/* =========================
+   VARIABLES
+========================= */
+:root {
+  --text: #222;
+  --muted: #8a8a8a;
+  --border: #eaeaea;
+  --bg: #ffffff;
+}
+
+/* =========================
+   RESET
+========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+/* =========================
+   LANGUAGE
+========================= */
+.en {
+  display: none;
+}
+
+body.en-mode .vi {
+  display: none;
+}
+
+body.en-mode .en {
+  display: inline;
+}
+
+/* =========================
+   HEADER
+========================= */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 28px;
+  border-bottom: 1px solid var(--border);
+}
+
+.logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.album-title {
+  font-size: 13px;
+  letter-spacing: 2px;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.header-actions .icon,
+.lang-toggle {
+  font-size: 14px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  opacity: 0.65;
+}
+
+.header-actions .icon:hover,
+.lang-toggle:hover {
+  opacity: 1;
+}
+
+/* =========================
+   MENU
+========================= */
+.album-menu {
+  display: flex;
+  justify-content: center;
+  gap: 34px;
+  padding: 26px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.album-menu button {
+  background: none;
+  border: none;
+  font-size: 13px;
+  letter-spacing: 1.6px;
+  cursor: pointer;
+  color: var(--muted);
+  position: relative;
+}
+
+.album-menu button.active {
+  color: var(--text);
+  font-weight: 500;
+}
+
+.album-menu button.active::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  width: 100%;
+  height: 1px;
+  background: var(--text);
+}
+
+/* =========================
+   TITLE
+========================= */
+.page-title {
+  text-align: center;
+  padding: 46px 0 36px;
+}
+
+.page-title h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 34px;
+  font-weight: 400;
+}
+
+/* =========================
+   GALLERY
+========================= */
+.gallery {
+  max-width: 1440px;
+  margin: auto;
+  padding: 0 28px 80px;
+  column-count: 3;
+  column-gap: 22px;
+}
+
+.gallery a {
+  display: block;
+  margin-bottom: 22px;
+  break-inside: avoid;
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.gallery a.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.gallery img {
+  width: 100%;
+  display: block;
+  border-radius: 4px;
+  transition: transform 0.4s ease;
+}
+
+.gallery img:hover {
+  transform: scale(1.025);
+}
+
+/* =========================
+   FOOTER
+========================= */
+.site-footer {
+  text-align: center;
+  padding: 40px 0 60px;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 1200px) {
+  .gallery {
+    column-count: 2;
+  }
+}
+
+@media (max-width: 768px) {
+  .site-header {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .album-menu {
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .page-title h1 {
+    font-size: 28px;
+  }
+
+  .gallery {
+    column-count: 1;
+    padding: 0 20px 60px;
+  }
+}
