@@ -31,7 +31,7 @@ menuButtons.forEach(button => {
         item.textContent = 'STORY OF LOVE';
       }
       if (filter === "bridgegroom") {
-        item.textContent = 'BRIDGE & GROOM';
+        item.textContent = 'BRIDE & GROOM';
       }
       if (filter === "ourlovelyguests") {
         item.textContent = 'OUR LOVELY GUESTS';
