@@ -175,6 +175,26 @@ body.en-mode .en {
   transform: scale(1.025);
 }
 
+/* #wedding1412 h1 {
+  display: none;
+} */
+
+#bridgegroom a {
+  display: none;
+}
+
+#ourlovelyguests-welcomingguests a {
+  display: none;
+}
+
+#ourlovelyguests-momentofjoy a {
+  display: none;
+}
+
+#weddingceremony a {
+  display: none;
+}
+
 /* =========================
    FOOTER
 ========================= */

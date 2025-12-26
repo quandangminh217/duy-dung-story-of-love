@@ -15,6 +15,8 @@ langToggle.addEventListener('click', () => {
 ========================= */
 const menuButtons = document.querySelectorAll('.album-menu button');
 const galleryItems = document.querySelectorAll('.gallery a');
+const pageTitles = document.querySelectorAll('.page-title h1');
+const pageTitleCommingSoon = document.querySelector('.page-title.commingsoon');
 
 menuButtons.forEach(button => {
   button.addEventListener('click', () => {
@@ -24,10 +26,32 @@ menuButtons.forEach(button => {
 
     const filter = button.dataset.filter;
 
+    pageTitles.forEach(item => {
+      if (filter === "storyoflove") {
+        item.textContent = 'STORY OF LOVE';
+      }
+      if (filter === "bridgegroom") {
+        item.textContent = 'BRIDGE & GROOM';
+      }
+      if (filter === "ourlovelyguests") {
+        item.textContent = 'OUR LOVELY GUESTS';
+      }
+      if (filter === "ourlovelyguests") {
+        item.textContent = 'OUR LOVELY GUESTS';
+      }
+      if (filter === "weddingceremony") {
+        item.textContent = 'WEDDING CEREMONY';
+      }
+      if (filter === "photoboothmoment") {
+        item.textContent = 'PHOTOBOOTH MOMENT';
+      }
+    });
+
     galleryItems.forEach(item => {
       const category = item.dataset.category;
+      console.log(filter);
 
-      if (filter === 'all' || category === filter) {
+      if (category === filter) {
         item.style.display = 'block';
         setTimeout(() => item.classList.add('visible'), 50);
       } else {
