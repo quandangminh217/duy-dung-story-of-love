@@ -16,6 +16,7 @@ langToggle.addEventListener('click', () => {
 const menuButtons = document.querySelectorAll('.album-menu button');
 const galleryItems = document.querySelectorAll('.gallery a');
 const pageTitles = document.querySelectorAll('.page-title h1');
+const pageTitlesh3 = document.querySelectorAll('.page-title h3');
 const pageTitleCommingSoon = document.querySelector('.page-title.commingsoon');
 
 menuButtons.forEach(button => {
@@ -35,9 +36,10 @@ menuButtons.forEach(button => {
       }
       if (filter === "ourlovelyguests") {
         item.textContent = 'OUR LOVELY GUESTS';
-      }
-      if (filter === "ourlovelyguests") {
-        item.textContent = 'OUR LOVELY GUESTS';
+
+        pageTitlesh3.forEach(item1 => {
+          item1.style.display = "block";
+        })
       }
       if (filter === "weddingceremony") {
         item.textContent = 'WEDDING CEREMONY';

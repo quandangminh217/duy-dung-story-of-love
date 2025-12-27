@@ -98,6 +98,12 @@ body.en-mode .en {
   gap: 34px;
   padding: 26px 0;
   border-bottom: 1px solid var(--border);
+  
+  position: sticky;
+  top: 0;
+  z-index: 999;
+
+  background: white; 
 }
 
 .album-menu button {
@@ -125,6 +131,57 @@ body.en-mode .en {
   background: var(--text);
 }
 
+/* bọc dropdown */
+.menu-dropdown {
+  position: relative;
+}
+
+/* dropdown ẩn mặc định */
+.dropdown-content {
+  position: absolute;
+  top: 100%;
+  left: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  background: white;
+  min-width: 200px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+  z-index: 10;
+
+  /* ẨN */
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+
+  transition: 
+    opacity 0.25s ease,
+    transform 0.25s ease,
+    visibility 0.25s;
+}
+
+/* hiện khi hover */
+.menu-dropdown:hover .dropdown-content {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* style cho nút con */
+.dropdown-content button {
+  padding: 12px 20px;
+  border: none;
+  background: white;
+  text-align: left;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.dropdown-content button:hover {
+  background: #f2f2f2;
+}
+
 /* =========================
    TITLE
 ========================= */
@@ -137,6 +194,13 @@ body.en-mode .en {
   font-family: 'Playfair Display', serif;
   font-size: 34px;
   font-weight: 400;
+}
+
+.page-title h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 24px;
+  font-weight: 400;
+  display: none;
 }
 
 /* =========================
