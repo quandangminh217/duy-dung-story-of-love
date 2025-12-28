@@ -107,7 +107,7 @@ galleryItems.forEach(item => observer.observe(item));
 const lightbox = GLightbox({
   touchNavigation: true,
   loop: true,
-  preload: true,
+  preload: false,
   zoomable: false,
   closeButton: true
 });
