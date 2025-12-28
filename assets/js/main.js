@@ -30,9 +30,17 @@ menuButtons.forEach(button => {
     pageTitles.forEach(item => {
       if (filter === "storyoflove") {
         item.textContent = 'STORY OF LOVE';
+
+        pageTitlesh3.forEach(item1 => {
+          item1.style.display = "none";
+        })
       }
       if (filter === "bridgegroom") {
         item.textContent = 'BRIDE & GROOM';
+
+        pageTitlesh3.forEach(item1 => {
+          item1.style.display = "none";
+        })
       }
       if (filter === "ourlovelyguests") {
         item.textContent = 'OUR LOVELY GUESTS';
@@ -43,9 +51,17 @@ menuButtons.forEach(button => {
       }
       if (filter === "weddingceremony") {
         item.textContent = 'WEDDING CEREMONY';
+
+        pageTitlesh3.forEach(item1 => {
+          item1.style.display = "none";
+        })
       }
       if (filter === "photoboothmoment") {
         item.textContent = 'PHOTOBOOTH MOMENT';
+
+        pageTitlesh3.forEach(item1 => {
+          item1.style.display = "none";
+        })
       }
     });
 
