@@ -1,8 +1,8 @@
 import os
 from PIL import Image
 
-INPUT_DIR = "assets/img/full/weddingceremony"
-OUTPUT_DIR = "assets/img_webp/weddingceremony"
+INPUT_DIR = "assets/img/full/ourlovelyguests/welcomingguests"
+OUTPUT_DIR = "assets/img_webp/welcomingguests"
 
 MAX_WIDTH = 2000      # resize nếu ảnh quá lớn
 QUALITY = 80          # 75–85 là đẹp cho web
